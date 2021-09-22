@@ -1,0 +1,12 @@
+@EndUserText.label: 'exercise 15'
+@MappingRole: true
+define role Z04_ACCESS_CONTROL {
+    grant
+        select
+            on
+                Z04_AUTHORIZATIONS
+                    where ( carrid ) = aspect pfcg_auth( S_CARRID,
+                                                         CARRID,
+                                                         ACTVT = '03'
+                                                        );
+}
